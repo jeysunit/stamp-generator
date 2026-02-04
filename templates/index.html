@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>スタンプ画像生成</title>
+  </head>
+  <body>
+    <main>
+      <h1>スタンプ画像生成</h1>
+      <p>文字スタンプ生成フォーム（画像アップロードは未実装）</p>
+      <form method="post" action="#" aria-label="文字スタンプ生成フォーム">
+        <fieldset>
+          <legend>サイズを選択</legend>
+          {% for size in size_options %}
+          <label>
+            <input type="radio" name="size" value="{{ size }}" {% if loop.first %}checked{% endif %} />
+            {{ size }} px
+          </label>
+          {% endfor %}
+        </fieldset>
+        <button type="submit" disabled>生成（準備中）</button>
+      </form>
+    </main>
+  </body>
+</html>
